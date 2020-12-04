@@ -22,3 +22,19 @@ Rscript ./install.packages.R
 ## Provide parameters
 
 `SAIGEgds_job-array.sh` contains parameters. These should be adapted.
+
+### Features
+
+`features` must be a path to a file with space separated columns.
+
+### Pheno
+
+`pheno` represents the target phenotype to perform associations for with genotypes. This must match a column within the `features` table.
+
+### Covariate formula
+
+`covariate_formula` should be a formula containing covariates. Spaces are not allowed in this argument. Covariates must be present in the `features` table
+
+### Trait type
+
+If the target phenotype (`pheno`) represents a binary phenotype (e.g. a disorder, having red natural hair colour), the trait type should be 'binary'. If the phenotype represents a continuous / quantitative phenotype (e.g. height, educational attainment, platelet concentration), the trait type should be 'quantitative'.
