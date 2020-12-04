@@ -37,4 +37,4 @@ Rscript ./install.packages.R
 
 ### Trait type
 
-If the target phenotype (`pheno`) represents a binary phenotype (e.g. a disorder, having red natural hair colour), the trait type should be 'binary'. If the phenotype represents a continuous / quantitative phenotype (e.g. height, educational attainment, platelet concentration), the trait type should be 'quantitative'.
+If the target phenotype (`pheno`) represents a binary phenotype (e.g. a disorder, having red natural hair colour), the trait type (`trait_type`) should be 'binary'. If the phenotype represents a continuous / quantitative phenotype (e.g. height, educational attainment, platelet concentration), the trait type should be 'quantitative'.
