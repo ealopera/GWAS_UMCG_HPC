@@ -22,8 +22,7 @@ echo "source directory: ${source_directory}"
 ml RPlus
 
 # The chromosome shall be equal to the index of this iteration of the job-array
-#chr=${SLURM_ARRAY_TASK_ID}
-chr=23
+chr=${SLURM_ARRAY_TASK_ID}
 
 # In case the 23rd chromosome is requested, this should be replaced by X for X-chromosome
 if [[ ${chr} == "23" ]]
