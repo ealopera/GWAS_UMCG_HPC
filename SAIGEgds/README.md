@@ -53,7 +53,7 @@ See [here](https://slurm.schedmd.com/) for detailed SLURM documentation.
 
 ### Job submission
 
-The GWAS can be started using the following command: 
+The GWAS can be started from the `SAIGEgds` directory using the following command: 
 ```bash
 sbatch SAIGEgds_UGLI_job-array.sh
 ```
