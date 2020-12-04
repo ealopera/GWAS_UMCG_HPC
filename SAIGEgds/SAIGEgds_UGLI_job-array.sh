@@ -47,8 +47,9 @@ features="<features>"
 # Should either be binary or quantitative
 trait_type="binary"
 
-# Covariate formula, e.g. "sex+age+age.squared"
-covariate_list="sex+age"
+# Covariate formula, e.g. "sex+age+age*sex"
+# Covariates must be present in the 'features' file
+covariate_formula="sex+age"
 
 # Genotype files
 grm_snp_file="/groups/umcg-lifelines/tmp01/releases/gsa_imputed/v1/GDS_files/UGLI_SNPs_for_GRM.gds"
@@ -60,7 +61,7 @@ echo "Running SAIGEgds with the following parameters:"
 echo "Chromosome: ${chr}"
 echo "Sample ID column: ${sample_column}"
 echo "Phenotype: ${pheno}"
-echo "Covariate list: ${covariate_list}"
+echo "Covariate formula: ${covariate_list}"
 echo "File containing phenotypic data: ${features}"
 echo "Path to genotype file: ${genotype_path}"
 echo "Path to genomic relationship matrix (GRM) SNPs: ${grm_snp_file}"
@@ -78,5 +79,5 @@ Rscript "${script_directory}/SAIGEgds_GWAS_script.R" \
  --output_path ${out_path} \
  --features ${features} \
  --trait_type ${trait_type} \
- --covariate_list ${covariate_list} \
+ --covariate_list ${covariate_formula} \
  --sample_id_column ${sample_column}
