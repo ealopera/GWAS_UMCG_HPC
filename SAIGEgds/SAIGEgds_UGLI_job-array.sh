@@ -13,11 +13,6 @@
 pwd; hostname; date
 echo "working directory; hostname; date"
 
-# This directory
-script_directory="$( dirname "${BASH_SOURCE[0]}" )"
-
-echo "source directory: ${source_directory}"
-
 # Load R module containing SAIGEgds dependent packages
 ml RPlus
 
@@ -31,17 +26,17 @@ then
 fi
 
 # Phenotype column name
-pheno="<phenotype>"
+pheno="COVID_C2_v2"
 
 # Sample ID
 sample_column="UGLI_ID"
 
 # Output file
-out="<output>"
+out="/groups/umcg-lifelines/tmp01/projects/ov20_0554/analysis/saige_gwas/week1-15b_partial_susceptibility_C2_v2/ugli/output2/"
 out_path="${out}/p-values.chr.${chr}.txt"
 
 # Feature files
-features="<features>"
+features="/groups/umcg-lifelines/tmp01/projects/ov20_0554/analysis/saige_gwas/SAIGE/phenotypes/covid19-week1-15b_ugli_covid_postest_vs_population_C2_v2.dat"
 
 # Trait type
 # Should either be binary or quantitative
@@ -49,7 +44,7 @@ trait_type="binary"
 
 # Covariate formula, e.g. "sex+age+age*sex"
 # Covariates must be present in the 'features' file
-covariate_formula="sex+age"
+covariate_formula="COVID_SEX+COVID_AGE+COVID_SEX*COVID_AGE+COVID_AGE^2"
 
 # Genotype files
 grm_snp_file="/groups/umcg-lifelines/tmp01/releases/gsa_imputed/v1/GDS_files/UGLI_SNPs_for_GRM.gds"
@@ -61,7 +56,7 @@ echo "Running SAIGEgds with the following parameters:"
 echo "Chromosome: ${chr}"
 echo "Sample ID column: ${sample_column}"
 echo "Phenotype: ${pheno}"
-echo "Covariate formula: ${covariate_list}"
+echo "Covariate formula: ${covariate_formula}"
 echo "File containing phenotypic data: ${features}"
 echo "Path to genotype file: ${genotype_path}"
 echo "Path to genomic relationship matrix (GRM) SNPs: ${grm_snp_file}"
@@ -72,7 +67,7 @@ echo "-------------------------"
 mkdir -p $out
 
 # Run SAIGE with the with parameters defined above
-Rscript "${script_directory}/SAIGEgds_GWAS_script.R" \
+Rscript "./SAIGEgds_GWAS_script.R" \
  --outcome ${pheno} \
  --snps_for_grm ${grm_snp_file} \
  --testgenotypes ${genotype_path} \
