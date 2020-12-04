@@ -2,8 +2,8 @@
 
 ## Install R packages libraries
 
-R libraries have to be installed for SAIGEgds to work. Set the preferred location to install R packeges by setting the `R_LIBS` environment variable.
-This can be easily set the following file: `~/.Renviron`
+R packages have to be installed for SAIGEgds to work. Set the preferred location to install R packages by setting the `R_LIBS` environment variable.
+This can be easily set inside the following file: `~/.Renviron`
 
 The file should contain the line below, make sure to replace `<R library location>` with a location the R packages can be written to, and loaded from.
 ```bash
