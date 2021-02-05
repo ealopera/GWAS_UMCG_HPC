@@ -39,6 +39,8 @@ A bash script has been prepared to perform a GWAS using SAIGEgds. This has been 
 
 If the target phenotype (`pheno`) represents a binary phenotype (e.g. a disorder, having red natural hair colour), the trait type (`trait_type`) should be 'binary'. If the phenotype represents a continuous / quantitative phenotype (e.g. height, educational attainment, platelet concentration), the trait type should be 'quantitative'.
 
+Cases and controls for a binary trait type should be coded as `1` and `0` respectively.
+
 ### Output path
 
 The output path to write summary statistics to has to set using `out`.
