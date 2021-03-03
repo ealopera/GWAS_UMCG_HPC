@@ -1,4 +1,4 @@
-# GWAS using SAIGEgds on the UMCG HPC
+# GWAS using SAIGE on the UMCG HPC
 
 ## Installing SAIGE
 - Change cache directory of singularity (this is your home directory by default, but due to recent changes in the home directory quota this is not allowed anymore). To do this you need to type in the command line while in gearshift:  \
