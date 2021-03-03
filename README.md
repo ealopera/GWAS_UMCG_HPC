@@ -1,8 +1,10 @@
 # GWAS_UMCG_HPC
 
-Created by: Robert Warmerdam, Esteban Lopera
-Created on: 03-03-2021
-Contact information: e.a.lopera.maya@umcg.nl, robert_warmerdam@hotmail.com 
+Created by: Robert Warmerdam, Esteban Lopera.
+
+Created on: 03-03-2021.
+
+Contact information: e.a.lopera.maya@umcg.nl, robert_warmerdam@hotmail.com.
 
 ### DESCRIPTION
 Here you will find instructions and scripts to calculate GWAS in the HPC-gearshift using SAIGE
