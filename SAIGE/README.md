@@ -34,7 +34,7 @@ Here is a list of the main parameters you need to run stardard GWAS. you will fi
 
 information score (INFO>0.4) and minor allele frequency (MAF>0.01) are by defaul filtered in the step2. script.
 
-## Running Phewas and GWAS
+## Running PheWAS and GWAS
 you should be able to run phewas by using the commands in  the launch_singularity_saige.sh. if you need a single phenotype you should run the command outside the loops and adjust the variables accordingly.
 
 
