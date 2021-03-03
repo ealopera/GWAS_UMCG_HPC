@@ -8,11 +8,13 @@
 
 ## variables
 ## please read carefully the comments as not all variables are defined in the first segment.
-# phenotype name is defined in lines 37 and 43
-# genotypes filepath is defined in lines 75-77
-# output folder is defined in line 45
+# phenotype name is defined in lines 39 and 45
+# genotypes filepath is defined in lines 77-79
+# output folder is defined in line 47
 # *** These objects are read by SAIGE. Therefore DO NOT indicate full path, but rahter the path from working directory.
- 
+
+# saige executable file path
+saige_path="/groups/umcg-lifelines/tmp01/projects/dag3_fecal_mgs/umcg-elopera/tools/saige_0.39.sif"
 # user: used to name the jobs in singularity and the cluster
 user="EALM"
 # working directory: temporary folders will be created here and singularuty SAIGE will take it as the current (home) folder
@@ -64,7 +66,8 @@ do
            ${Removezero} \
            ${singularityName} \
 		   ${sample_col} \
-           ${trait_type} )
+           ${trait_type} \
+           ${saige_path} )
 			   
   fi
   
@@ -83,8 +86,8 @@ do
         
            sbatch -J "${chr}.saige.${pheno}" \
            --dependency=afterany:$jid2 \
-           -o "${log}/${chr}.out" \
-           -e "${log}/${chr}.err" \
+           -o "${log}/step2.${chr}.out" \
+           -e "${log}/step2.${chr}.err" \
            --cpus-per-task $threads \
            --time 5:00:00 \
            -v ${jobpath}/4.step2_assoc_only.sh \
@@ -93,12 +96,13 @@ do
            ${out} \
            ${singularityName} \
            ${chr} \
-		   ${format}
+		   ${format}\
+           ${saige_path} 
 		   
        else
           sbatch -J "${chr}.saige.${pheno}" \
-                 -o "${log}/${chr}.out" \
-                 -e "${log}/${chr}.err" \
+                 -o "${log}/step2.${chr}.out" \
+                 -e "${log}/step2.${chr}.err" \
                  --cpus-per-task $threads \
                  --time 5:00:00 \
                  -v ${jobpath}/step2_assoc_only.sh \
@@ -107,7 +111,8 @@ do
                  ${out} \
                  ${singularityName} \
                  ${chr} \
-			     ${format}
+			     ${format}\
+                 ${saige_path} 
           
         fi
               sleep 0.5  

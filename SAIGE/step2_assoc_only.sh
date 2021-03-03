@@ -9,10 +9,11 @@ echo "out=" $3
 echo "singularityname=" ${4}
 echo "chromosome:" ${5}
 echo "format:" ${6}
+echo "saige_path:" ${7}
 
 ##################################### step 2 ###################################################
 
-singularity instance start -B  ${1}:/tmp /groups/umcg-lifelines/tmp01/projects/dag3_fecal_mgs/umcg-elopera/tools/saige_0.39.sif ${4} 
+singularity instance start -B  ${1}:/tmp ${7} ${4} 
 
 
 

@@ -15,6 +15,7 @@ echo "removezero=" ${8}
 echo "singularityname=" ${9}
 echo "sample_col=" ${10}
 echo "trait_type=" ${11}
+echo "saige_path=" ${12}
 
 
 ##################################### step 1 ###################################################
@@ -31,7 +32,7 @@ echo "trait_type=" ${11}
   nsize=$( wc -l ${1}/${5}/feat.temp )
   echo "number of non-NA samples =" ${nsize}
   
-  singularity instance start -B  ${1}:/tmp /groups/umcg-lifelines/tmp01/projects/dag3_fecal_mgs/umcg-elopera/tools/saige_0.39.sif ${9}
+  singularity instance start -B  ${1}:/tmp ${12} ${9}
   ###launch step 1 (null model)
   #For Quantitative traits, if not normally distributed, inverse normalization needs to be specified to be TRUE --invNormalize=TRUE
   
