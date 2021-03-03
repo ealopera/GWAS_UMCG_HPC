@@ -16,7 +16,7 @@ plink --bfile <all_chromosomes_merged_hard_call_genotypes> \
  ```
 
 ## SAIGE parameters
-Here is a list of the main parameters you need to run stardard GWAS. you will find these in the launch script: 
+Here is a list of the main parameters you might need, to run a stardard GWAS. you will find these in the launch script: 
 - saige_path: saige executable file path
 - user: used to name the jobs in singularity and the cluster
 - wkdir: working directory: temporary folders will be created here and singularuty SAIGE will take it as the current (home) folder
