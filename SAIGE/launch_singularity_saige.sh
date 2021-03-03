@@ -96,7 +96,7 @@ do
            ${out} \
            ${singularityName} \
            ${chr} \
-		   ${format}\
+           ${format} \
            ${saige_path} 
 		   
        else
@@ -111,7 +111,7 @@ do
                  ${out} \
                  ${singularityName} \
                  ${chr} \
-			     ${format}\
+	         ${format} \
                  ${saige_path} 
           
         fi
