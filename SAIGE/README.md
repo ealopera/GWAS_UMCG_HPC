@@ -20,7 +20,7 @@ Here is a list of the main parameters you might need, to run a stardard GWAS. yo
 - saige_path: saige executable file path
 - user: used to name the jobs in singularity and the cluster
 - wkdir: working directory: temporary folders will be created here and singularuty SAIGE will take it as the current (home) folder
-- jobpath: scripts called by this launcher should be located here
+- jobpath: scripts foir step 1 and step2, called by the launcher should be located here
 - featuresfile: file with phenotypes in the columns and sample IDs
 - sample_col: sample IDs column name, make sure the sample IDs are the same in the phenotype and genotype files
 - trait_type: "quantitative" or "binary"
