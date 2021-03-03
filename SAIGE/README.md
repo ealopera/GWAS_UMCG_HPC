@@ -26,7 +26,7 @@ Here is a list of the main parameters you need to run stardard GWAS. you will fi
 - trait_type: "quantitative" or "binary"
 - GRMfile: path to plink file (index) containing the snps and genotypes used for GRM calculation (created above)
 - covar: covariate columns separated by commas
-- list: For Phewas analyses indicate the phenotypes names in a list, otherwise define single phenotype in the "pheno" variable
+- list: For Phewas analyses indicate the names of the phenotypes in a list, otherwise define then single phenotype in the "pheno" variable
 - out: path where you want the output to be located
 - pheno: name of the outcome variable (it must match the column in the features file)
 - testgenotypes: path to the imputed genotypes files. it should include chromosome number.
