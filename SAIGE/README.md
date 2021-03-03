@@ -7,7 +7,7 @@
 ```singularity pull docker://wzhou88/saige:0.44```
 
 ## Build genetic relationship matrix (GRM)
-Create a plink file with a select a list of SNPs by prunning your hard called genotypes (recommended LD r2<0.2, window=500kb,MAF>0.05). this will be used by SAIGE to weight for cryptic relatedness.
+Create a plink file with a selected list of SNPs by prunning your hard called genotypes (recommended LD r2<0.2, window=500kb,MAF>0.05). this will be used by SAIGE to weight for cryptic relatedness.
 ``` 
 plink --bfile <all_chromosomes_merged_hard_call_genotypes> \
       --indep 500 50 1.04 \
