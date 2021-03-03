@@ -14,5 +14,5 @@ Here you will find instructions and scripts to calculate GWAS in the HPC-gearshi
 -list of covariates (or model). 
 
 ### INSTRUCTIONS
-If you are going for a quick analysis we recomend to use the GDS version of SAIGE. it uses the genotype (GT) field of the files and each chromosome might takes up to 20 min for 40k samples. you will need all your files to be in GDS format. Otherwise, if you need a more precise anaylsis use normal SAIGE and prepare vcf of bgen files with their respective index files and make use the have the dosage (DS field). \
+If you are going for a quick analysis we recomend to use the GDS version of SAIGE. it uses the genotype (GT) field of the files and each chromosome might take up to 20 min for 40k samples. You will need all your files to be in GDS format. Otherwise, if you need a more precise anaylsis use normal SAIGE and prepare vcf of bgen files with their respective index files and make sure they have the dosage (DS field). \
 Detailed instructions are found in the respective folders.
