@@ -1,9 +1,7 @@
 # GWAS_UMCG_HPC
 
 Created by: Robert Warmerdam, Esteban Lopera.
-
 Created on: 03-03-2021.
-
 Contact information: e.a.lopera.maya@umcg.nl, robert_warmerdam@hotmail.com.
 
 ### DESCRIPTION
