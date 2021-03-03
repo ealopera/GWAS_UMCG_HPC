@@ -1,7 +1,7 @@
 # GWAS using SAIGEgds on the UMCG HPC
 
 ## Installing SAIGE
-- Change cache directory of singularity (this is your home directory by default, but due to recent changes in the home directory quota this is not allowed anymore). to do this you need to type in the command line while in gearshift:  \
+- Change cache directory of singularity (this is your home directory by default, but due to recent changes in the home directory quota this is not allowed anymore). To do this you need to type in the command line while in gearshift:  \
 ```export SINGULARITY_CACHEDIR="<directory of choice>" ```
 - Download the executable of SAIGE, by typing teh following command. you can also check for the new version (https://github.com/weizhouUMICH/SAIGE) and change the command accordingly:  \
 ```singularity pull docker://wzhou88/saige:0.44```
