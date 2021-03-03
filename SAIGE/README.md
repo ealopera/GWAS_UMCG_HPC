@@ -32,7 +32,7 @@ Here is a list of the main parameters you might need, to run a stardard GWAS. yo
 - testgenotypes: path to the imputed genotypes files. it should include chromosome number.
 - format: format for the genotypes files (vcf or bgen)
 
-information score (INFO>0.4) and minor allele frequency (MAF>0.01) are by defaul filtered in the step2. script.
+information score (INFO>0.4) and minor allele frequency (MAF>0.01) are by defaul filtered in the step2 script. You can modify them form there if needed.
 
 ## Running PheWAS and GWAS
 you should be able to run phewas by using the commands in  the launch_singularity_saige.sh. if you need a single phenotype you should run the command outside the loops and adjust the variables accordingly.
