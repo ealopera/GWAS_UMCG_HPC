@@ -12,6 +12,7 @@ Create a plink file with a selected list of SNPs by prunning your hard called ge
 plink --bfile <all_chromosomes_merged_hard_call_genotypes> \
       --indep 500 50 1.04 \
       --maf 0.05 \
+      --make-bed \
       --out <SNPs_for_GRM> 
  ```
 
