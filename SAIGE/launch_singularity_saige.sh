@@ -90,7 +90,7 @@ do
            -e "${log}/step2.${chr}.err" \
            --cpus-per-task $threads \
            --time 5:00:00 \
-           -v ${jobpath}/4.step2_assoc_only.sh \
+           -v ${jobpath}/step2_assoc_only.sh \
            ${wkdir} \
            ${testgenotypes} \
            ${out} \
