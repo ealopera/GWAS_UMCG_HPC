@@ -26,7 +26,7 @@ echo "saige_path=" ${12}
       ### create no_) file for the 3
       awk  -F'\t'  '$n!=0 '  n=$n_2  ${1}/$3> ${1}/${5}/feat.temp
     else
-      cat ${1}/{3} > ${1}/${5}/feat.temp
+      cat ${1}/${3} > ${1}/${5}/feat.temp
   fi
   
   nsize=$( wc -l ${1}/${5}/feat.temp )
