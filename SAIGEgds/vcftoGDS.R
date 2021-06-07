@@ -18,12 +18,12 @@ library(optparse)
 
 #opt<-list()
 
-#opt$workdir="/groups/umcg-lifelines/tmp01/projects/ov18_0463/UGLI_gds/genotype"
+#opt$workdir="/UGLI_gds/genotype"
 #opt$file<-"full_genotype_single.vcf"
 #opt$output<-"full_genotype_single"
 
 ###test run
-#Rscript vcftoGDS.R -w "/groups/umcg-ugli/tmp01/umcg-elopera/UGLI_gds/genotype" \
+#Rscript vcftoGDS.R -w "/UGLI_gds/genotype" \
 #                   -f "full_genotype_nn.vcf" \
 #                   -o "full_genotype_nn"
 
