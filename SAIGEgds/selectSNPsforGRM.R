@@ -17,11 +17,13 @@ library(tidyverse)
 library(optparse)
 
 ####################################
-#output paths and/or input files####
+##Usage; output paths and/or input files####
 
 #opt<-list()
-#opt$genotypes_VCF<-"/groups/umcg-lifelines/tmp01/projects/ov18_0463/UGLI_gds/genotype/full_genotype_single.gds"
-#opt$genotype_for_grm<-"/groups/umcg-ugli/tmp01/umcg-elopera/UGLI_gds/genotype/UGLI_SNPs_for_GRM.gds"
+##input
+#opt$genotypes_VCF<-"genotype/full_genotype_single.gds" ### full merged genotype file (or chromosome)
+##output
+#opt$genotype_for_grm<-"genotype/UGLI_SNPs_for_GRM.gds" ## file of the genetic relationship matrix
 
 
 #############################################
@@ -44,7 +46,7 @@ opt <- parse_args(opt_parser)
 
 
 ###TAKE NOTE: as this is for the GRM, we need only the snps that are informative of relationship between the individuals. COnsidering most of the 
-# variability and IBD is already contained in the genotype it would be unnecesary and redundanr to use the imputed data. therefore the opt$genotypes_VCF comes from the genotyping and not the imputed vcf files. Also note in spite of the name opt$genotypes_VCF  is a GDS file!!
+# variability and IBD is already contained in the genotype it would be unnecesary and redundant to use the imputed data. therefore the opt$genotypes_VCF comes from the genotyping and not the imputed vcf files. Also note in spite of the name opt$genotypes_VCF  is a GDS file!!
 
 ## open the created GDS file
 gds_grm <- seqOpen(opt$genotypes_VCF)
