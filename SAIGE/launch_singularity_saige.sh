@@ -43,8 +43,9 @@ cat $list | while read line
 do
 
   pheno=${line}
-  log="${wkdir}/logs/singularity/${pheno}_logs/"
-  out="output/pwys_bgen/${pheno}_gwas" # ***
+  out="output/${pheno}_gwas" # ***
+  log="${wkdir}/${out}/logs"
+  mkdir -p ${log}
   mkdir -p ${log}
   
   if [ ! -e ${wkdir}/${out}/model.rda  ]; then
