@@ -31,6 +31,7 @@ if [[ ${6} != "vcf"  ]]; then
     --varianceRatioFile=/tmp/${3}/model.varianceRatio.txt \
     --SAIGEOutputFile=/tmp/${3}/p-values.chr.${5} \
     --IsOutputAFinCaseCtrl=FALSE \
+    --LOCO=FALSE \
     --numLinesOutput=2 
   else
 
@@ -45,6 +46,7 @@ if [[ ${6} != "vcf"  ]]; then
     --varianceRatioFile=/tmp/${3}/model.varianceRatio.txt \
     --SAIGEOutputFile=/tmp/${3}/p-values.chr.${5} \
     --IsOutputAFinCaseCtrl=FALSE \
+    --LOCO=FALSE \
     --numLinesOutput=2 
 fi
 
