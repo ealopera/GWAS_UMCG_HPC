@@ -35,6 +35,8 @@ covar="age,gender"
 threads=5
 # This command removes zero (0) values in the phenotype column reducing sample size. "1" to remove zero values, "0" to include zero values in the gwas calculation
 Removezero=1
+# MAF filter (notice this filter is applied after removing NA or zero values, so the number of teste variants is affected by the final sample size)
+maf_filt=0.001
 # For Phewas analyses indicate their names in a list, otherwise define sigle phenotype (line  43) and use step 1 oustide of the loop
 list="${wkdir}/features_and_phenotypes/pwys_for_bgen.list"
 
@@ -98,7 +100,8 @@ do
            ${singularityName} \
            ${chr} \
            ${format} \
-           ${saige_path} 
+           ${saige_path} \
+           ${maf_filt}
 		   
        else
           sbatch -J "${chr}.saige.${pheno}" \
@@ -113,7 +116,8 @@ do
                  ${singularityName} \
                  ${chr} \
 	         ${format} \
-                 ${saige_path} 
+                 ${saige_path} \
+                 ${maf_filt}
           
         fi
               sleep 0.5  
