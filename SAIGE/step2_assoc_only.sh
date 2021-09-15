@@ -10,6 +10,7 @@ echo "singularityname=" ${4}
 echo "chromosome:" ${5}
 echo "format:" ${6}
 echo "saige_path:" ${7}
+echo "maf_filt:" ${8}
 
 ##################################### step 2 ###################################################
 
@@ -24,14 +25,14 @@ if [[ ${6} != "vcf"  ]]; then
     --bgenFile=/tmp/${2} \
     --bgenFileIndex=/tmp/${2}.bgi \
     --sampleFile=/tmp/${2}.sample \
-    --minMAF=0.01 \
+    --minMAF=${8} \
     --minInfo=0.4 \
     --chrom=${5} \
     --GMMATmodelFile=/tmp/${3}/model.rda \
     --varianceRatioFile=/tmp/${3}/model.varianceRatio.txt \
     --SAIGEOutputFile=/tmp/${3}/p-values.chr.${5} \
     --IsOutputAFinCaseCtrl=FALSE \
-    --LOCO=FALSE \
+    --LOCO=FALSE    \
     --numLinesOutput=2 
   else
 
@@ -39,14 +40,14 @@ if [[ ${6} != "vcf"  ]]; then
     --vcfFile=/tmp/${2} \
     --vcfFileIndex=/tmp/${2}.csi \
     --vcfField=DS \
-    --minMAF=0.01 \
+    --minMAF=${8} \
     --minInfo=0.4 \
     --chrom=${5} \
     --GMMATmodelFile=/tmp/${3}/model.rda \
     --varianceRatioFile=/tmp/${3}/model.varianceRatio.txt \
     --SAIGEOutputFile=/tmp/${3}/p-values.chr.${5} \
     --IsOutputAFinCaseCtrl=FALSE \
-    --LOCO=FALSE \
+    --LOCO=FALSE    \
     --numLinesOutput=2 
 fi
 
