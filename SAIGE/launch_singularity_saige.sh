@@ -14,19 +14,19 @@
 # *** These objects are read by SAIGE. Therefore DO NOT indicate full path, but rahter the path from working directory.
 
 # saige executable file path
-saige_path="/groups/umcg-lifelines/tmp01/projects/dag3_fecal_mgs/umcg-elopera/tools/saige_0.39.sif"
+saige_path="[your_saige_folder]/saige_0.39.sif"
 # user: used to name the jobs in singularity and the cluster
-user="EALM"
+user="[your_name]"
 # working directory: temporary folders will be created here and singularuty SAIGE will take it as the current (home) folder
-wkdir="/groups/umcg-lifelines/tmp01/projects/dag3_fecal_mgs/umcg-elopera/" 
+wkdir="[your_working_directory]" 
 # job path: scripts called by this launcher should be located here
-jobpath="/groups/umcg-lifelines/tmp01/projects/dag3_fecal_mgs/umcg-elopera/scripts/4.SAIGE_mb_usage/singularity_gearshift"
+jobpath="[your_script_folder]"
 # features file: file with phenotypes in the columns and sample IDs. ***
-featuresfile="features_and_phenotypes/DAG3_gen_BMI_merged_log_v3.txt"
+featuresfile="[your_phenotypes_file]"
 # sample IDs column name, make sure the sample IDs are the same in the phenotype and genotype files
 sample_col="ID"
 # trait type: "quantitative" or "binary"
-trait_type="quantitative"
+trait_type="quantitative" 
 # Genetic relationship matrix (GRM): path to plink file (index) containing the snps and genotypes used for GRM calculation ***
 GRMfile="genotypes/SNPsforGRM"
 # covariate columns
@@ -38,7 +38,7 @@ Removezero=1
 # MAF filter (notice this filter is applied after removing NA or zero values, so the number of teste variants is affected by the final sample size)
 maf_filt=0.001
 # For Phewas analyses indicate their names in a list, otherwise define sigle phenotype (line  43) and use step 1 oustide of the loop
-list="${wkdir}/features_and_phenotypes/pwys_for_bgen.list"
+list="${wkdir}/[phenotypes_list]"
 
 ## step 1 launcher
 cat $list | while read line 
